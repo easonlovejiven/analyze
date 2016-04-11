@@ -1,0 +1,124 @@
+<!-- BEGIN VALIDATION STATES-->
+<div class="portlet light">
+  <div class="portlet-title">
+    <div class="caption">
+      <i class="fa fa-cogs font-green-sharp"></i>
+      <span class="caption-subject font-green-sharp bold uppercase">新建用户</span>
+    </div>
+  </div>
+  <div class="portlet-body form">
+    <!-- BEGIN FORM-->
+    <%= form_for([:admin, @user], :html => {:class => 'form-horizontal clearfix user-form-validate', :role => 'form'}) do |f| %>
+    <div class="form-body">
+
+      <div class="form-group">
+        <%= f.label(:username, :class => "control-label col-md-3") do %>
+        用户名<span class="required">*</span>
+        <% end %>
+        <div class="col-md-4">
+          <%= f.text_field(:username, :placeholder => '用户名', :class => 'form-control') %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label(:email, :class => "control-label col-md-3") do %>
+        邮箱<span class="required">*</span>
+        <% end %>
+        <div class="col-md-4">
+          <%= f.text_field(:email, :placeholder => '邮箱', :class => 'form-control') %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label(:phone, :class => "control-label col-md-3") do %>
+        手机号
+        <% end %>
+        <div class="col-md-4">
+          <%= f.text_field(:phone, :placeholder => '手机号', :class => 'form-control') %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label(:genre,  '用户类型', :class => "col-md-3 control-label") %>
+        <div class="col-md-4">
+          <%= f.select(:genre, [['主编', 1],['值班编辑', 2],['记者', 3],['普通用户', 4],['市场', 5]], {}, :class => 'form-control') %>
+        </div>
+      </div>           
+
+      <div class="form-group fileupload">
+        <%= f.label(:face_pic, "头像", :class => "col-md-3 control-label") %>
+        <div class="col-md-4">
+          <div class="fileinput small fileinput-new" data-provides="fileinput">
+            <div class="fileinput-new thumbnail">
+              <img src="<%= @user.face_pic %>" alt=""/>
+            </div>
+            <div class="fileinput-preview fileinput-exists thumbnail"></div>
+            <div>
+              <span class="btn btn-default btn-file">
+                <span class="fileinput-new">选择(180*180)</span>
+                <span class="fileinput-exists">替换</span>
+                <%= f.file_field(:face_pic, :accept => "image/*") %>
+              </span>
+              <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">移除</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group fileupload">
+        <%= f.label(:background_image_pic, "背景图", :class => "col-md-3 control-label") %>
+        <div class="col-md-4">
+          <div class="fileinput small fileinput-new" data-provides="fileinput">
+            <div class="fileinput-new thumbnail">
+              <img src="<%= @user.background_image_pic %>" alt=""/>
+            </div>
+            <div class="fileinput-preview fileinput-exists thumbnail"></div>
+            <div>
+              <span class="btn btn-default btn-file">
+                <span class="fileinput-new">选择(500*200)</span>
+                <span class="fileinput-exists">替换</span>
+                <%= f.file_field(:background_image_pic, :accept => "image/*") %>
+              </span>
+              <a href="#" class="btn btn-default fileinput-exists" data-dismiss="fileinput">移除</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label(:password, :class => "control-label col-md-3") do %>
+        密码
+        <% end %>
+        <div class="col-md-4">
+          <%= f.text_field(:password, :placeholder => '密码', :class => 'form-control') %>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <%= f.label(:password_confirmation, :class => "control-label col-md-3") do %>
+        确认密码
+        <% end %>
+        <div class="col-md-4">
+          <%= f.text_field(:password_confirmation, :placeholder => '确认密码', :class => 'form-control') %>
+        </div>
+      </div>      
+
+
+    </div>
+    <div class="form-actions">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-9">
+                <%= link_to '返回', admin_users_path, :class => 'btn btn-default' %>
+                <% if action_name == 'new' %>
+                <button type="submit" class="btn green">保存</button>
+                <% else %>
+                <button type="submit" class="btn green">更新</button>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <% end %>
+    <!-- END FORM-->
+  </div>
+</div>
+<!-- END VALIDATION STATES-->

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QdailyAnalytics管理平台</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+    <%= stylesheet_link_tag  'pages/admin/' + controller_name + '/' + action_name, :media => "all" %>
+
+    <%= csrf_meta_tags %>
+</head>
+<body class="<%= controller_name%> <%= action_name %> <%= (controller_name == 'sessions' || controller_name == 'registrations') ? 'login' : '' %>">
+    <% unless (controller_name == 'sessions' || controller_name == 'registrations') %>
+        <%= render partial: 'layouts/header' %>
+    <% end %>
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+        <%= yield %>
+    </div>
+    <!-- END CONTAINER -->
+
+    <%= javascript_include_tag 'pages/admin/' + controller_name + '/' + action_name %>
+</body>
+</html>

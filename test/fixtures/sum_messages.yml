@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  post_id: 1
+  impression_count: 1
+  click_count: 1
+  comment_count: 1
+  praise_count: 1
+  qq_share: 1
+  wechat_share: 1
+  weibo_share: 1
+  genre: 1
+
+two:
+  post_id: 1
+  impression_count: 1
+  click_count: 1
+  comment_count: 1
+  praise_count: 1
+  qq_share: 1
+  wechat_share: 1
+  weibo_share: 1
+  genre: 1

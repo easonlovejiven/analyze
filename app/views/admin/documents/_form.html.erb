@@ -1,0 +1,31 @@
+<!-- BEGIN VALIDATION STATES-->
+<div class="portlet light">
+  <div class="portlet-title">
+    <div class="caption">
+      <i class="fa fa-cogs font-green-sharp"></i>
+      <span class="caption-subject font-green-sharp bold uppercase">上传文件</span>
+    </div>
+  </div>
+  <div class="portlet-body form">
+    <!-- BEGIN FORM-->
+    <%= form_for([:admin, @document], :html => {:class => 'form-horizontal clearfix user-form-validate', :role => 'form'}) do |f| %>
+    <div class="form-body">      
+      <%= f.file_field :file %>
+    </div>
+    <div class="form-actions">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-9">
+                <%= link_to '返回', admin_users_path, :class => 'btn btn-default' %>
+                <% if action_name == 'new' %>
+                <button type="submit" class="btn green">保存</button>
+                <% else %>
+                <button type="submit" class="btn green">更新</button>
+                <% end %>
+            </div>
+        </div>
+    </div>
+    <% end %>
+    <!-- END FORM-->
+  </div>
+</div>
+<!-- END VALIDATION STATES-->

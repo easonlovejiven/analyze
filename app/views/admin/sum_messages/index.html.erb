@@ -1,0 +1,80 @@
+<!-- BEGIN PAGE HEAD -->
+<div class="page-head">
+  <div class="container">
+    <!-- BEGIN PAGE TITLE -->
+    <div class="page-title">
+      <h1>数据统计</h1>
+    </div>
+    <!-- END PAGE TITLE -->
+  </div>
+</div>
+<!-- END PAGE HEAD -->
+<!-- BEGIN PAGE CONTENT -->
+<div class="page-content">
+  <div class="container">
+    <!-- BEGIN PAGE BREADCRUMB -->
+    <ul class="page-breadcrumb breadcrumb">
+      <li class="active">统计列表页</li>
+    </ul>
+    <!-- END PAGE BREADCRUMB -->
+
+    <!-- BEGIN PAGE CONTENT INNER -->
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Begin: life time stats -->
+          <div class="portlet light">
+            <div class="portlet-title">
+              <div class="caption">
+                <i class="fa fa-gift font-green-sharp"></i>
+                <span class="caption-subject font-green-sharp bold uppercase">统计列表</span>
+                <span class="caption-helper">管理统计</span>
+              </div>
+              <div class="actions">
+                  <form class="filter-form" action="/">
+                      <input type="text" size="16" id="date_mark" name="dateMark" readonly class="form-control form_datetime">
+
+                      <label class="radio-inline">
+                        <input type="radio" id="day" name="optionsRadios" value="day" checked> 天级
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" id="hour" name="optionsRadios" value="hour"> 小时级
+                      </label>
+
+                      <a href="#" class="btn btn-default submit">查询</a>
+                  </form>
+              </div>
+            </div>
+
+            <div class="portlet-body">
+              <div class="table-container">
+                <table class="com-datatable-ajax table table-striped table-bordered table-hover" data-url="<%= more_sum_message_admin_sum_messages_path %>">
+                  <thead>
+                    <tr role="row" class="heading">
+                        <th class="table-checkbox" width="6%">
+                          <input type="checkbox" class="group-checkable" />
+                        </th>
+                        <th>文章ID</th>
+                        <th>浏览量</th>
+                        <th>点击量</th>
+                        <th>评论量</th>
+                        <th>赞数</th>
+                        <th>QQ分享</th>
+                        <th>微信分享</th>
+                        <th>微博分享</th>
+                        <th>文章类型</th>
+                        <th width="12%">操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- End: life time stats -->
+        </div>
+      </div>
+      <!-- END PAGE CONTENT INNER -->
+  </div>
+</div>
+<!-- END PAGE CONTENT -->

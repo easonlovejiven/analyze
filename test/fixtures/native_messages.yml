@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  post_id: 1
+  impression: 1
+  impression_date: 2016-04-03
+  click: 1
+  click_date: 2016-04-03
+  comment: 1
+  comment_date: 2016-04-03
+  praise: 1
+  praise_date: 2016-04-03
+  qq: 1
+  qq_date: 2016-04-03
+  wechat: 1
+  wechat_date: 2016-04-03
+  weibo: 1
+  weibo_date: 2016-04-03
+  genre: 1
+
+two:
+  post_id: 1
+  impression: 1
+  impression_date: 2016-04-03
+  click: 1
+  click_date: 2016-04-03
+  comment: 1
+  comment_date: 2016-04-03
+  praise: 1
+  praise_date: 2016-04-03
+  qq: 1
+  qq_date: 2016-04-03
+  wechat: 1
+  wechat_date: 2016-04-03
+  weibo: 1
+  weibo_date: 2016-04-03
+  genre: 1

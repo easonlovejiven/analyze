@@ -1,0 +1,66 @@
+<!-- BEGIN PAGE HEAD -->
+<div class="page-head">
+  <div class="container">
+    <!-- BEGIN PAGE TITLE -->
+    <div class="page-title">
+      <h1>用户列表</h1>
+    </div>
+    <!-- END PAGE TITLE -->
+  </div>
+</div>
+<!-- END PAGE HEAD -->
+<!-- BEGIN PAGE CONTENT -->
+<div class="page-content">
+  <div class="container">
+    <!-- BEGIN PAGE BREADCRUMB -->
+    <ul class="page-breadcrumb breadcrumb">
+      <li class="active">用户列表页</li>
+    </ul>
+    <!-- END PAGE BREADCRUMB -->
+
+    <!-- BEGIN PAGE CONTENT INNER -->
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Begin: life time stats -->
+          <div class="portlet light">
+            <div class="portlet-title">
+              <div class="caption">
+                <i class="fa fa-gift font-green-sharp"></i>
+                <span class="caption-subject font-green-sharp bold uppercase">用户列表</span>
+                <span class="caption-helper">管理用户</span>
+              </div>
+              <div class="actions">
+                <a href="<%= new_admin_user_path %>" class="btn btn-default btn-circle">
+                  <i class="fa fa-plus"></i>
+                  <span class="hidden-480"> 新建用户</span>
+                </a>
+              </div>
+            </div>
+            <div class="portlet-body">
+              <div class="table-container">
+                <table class="com-datatable-ajax table table-striped table-bordered table-hover" data-url="<%= more_user_admin_users_path %>">
+                  <thead>
+                    <tr role="row" class="heading">
+                        <th class="table-checkbox" width="6%">
+                            <input type="checkbox" class="group-checkable" />
+                        </th>
+                        <th>用户名</th>
+                        <th>邮箱</th>
+                        <th>手机号</th>
+                        <th>用户类型</th>
+                        <th width="12%">操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- End: life time stats -->
+        </div>
+      </div>
+      <!-- END PAGE CONTENT INNER -->
+  </div>
+</div>
+<!-- END PAGE CONTENT -->
